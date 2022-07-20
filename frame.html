@@ -1,0 +1,103 @@
+<html>
+    <head>
+<script src = "https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    </head>
+    <body>
+    <a-scene>
+
+        <a-entity
+        geometry="primitive:box "
+        position="1 1 1"
+        material="color: green;"
+      
+       animation="property:rotation; to: 0 300 0; dur:2000;loop:true;easing:linear "
+      ></a-entity>
+
+
+      <a-box
+       color="tomato" 
+       depth="2"
+        height="4"
+         width="4"
+         position="-3 4 -3"
+         rotation="0 100 0"
+         anima  ption="property: position; to: 1 8 -10; dur: 2000; loop: true"
+         animation="property:rotation; to: 0 500 0; dur:2000; loop:true;easing:linear "
+         ></a-box>
+   
+         these are our lights 
+        <a-entity
+          light="type: ambient; color: #BBB"
+        ></a-entity>
+        <a-entity
+          light="type: directional; color: #FFF; intensity: 0.6"
+          position="0.5 1 1"
+        ></a-entity>
+    
+        <a-entity camera look-controls wasd-controls position="1 5 9"></a-entity>
+     
+        <!--the road-->
+      
+      <a-entity
+       geometry="primitive: plane; height: 4; width: 74" 
+       material="color:black"
+       light="type: ambient"
+       rotation="-90 30 0"
+       position="3 3 1"
+       >
+       
+
+       <a-plane 
+       color="green" 
+       height="0.3"
+        width="3"
+        position="7 -3 1"
+        ></a-plane>
+
+        <a-plane 
+       color="green" 
+       height="0.4"
+        width="0.5"
+        position="-7 -3 1"
+        ></a-plane>
+
+        <a-plane 
+       color="green" 
+       height="1"
+        width="2"
+        ></a-plane>
+
+      </a-entity>
+
+<!--sky-->
+
+<a-sky color="#6EBAA7"></a-sky>
+
+
+
+<a-sphere
+ color="yellow"
+  radius="3"
+  height="50"
+  width="20"
+  position="-6 4 1"
+  ></a-sphere>
+
+  <a-torus 
+  color="#43A367"
+   arc="300 300"
+    radius="1"
+     radius-tubular="0.1"
+     position="14 5 -1"
+     ></a-torus>
+
+
+     
+     
+
+     
+
+
+      </a-scene>
+    </body>
+   </html>
